@@ -16,32 +16,37 @@ namespace addressbook_testdata_generator
     {
         static void Main(string[] args)
         {
+            StreamWriter writer = null;
             string datatype = args[0];
             int count = Convert.ToInt32(args[1]);
             string[] filename = args[2].Split('.');
-            StreamWriter writer = new StreamWriter(args[2]);
             string format = filename[1];
             List<GroupData> groups = new List<GroupData>();
             List<ContactData> contacts = new List<ContactData>();
             if (datatype == "groups")
-            {
-                for (int i = 0; i < count; i++)
                 {
-                    groups.Add(new GroupData()
+                    for (int i = 0; i < count; i++)
                     {
-                        Groupname = TestBase.GenerateRandomString(10),
-                        Groupheader = TestBase.GenerateRandomString(50),
-                        Groupfooter = TestBase.GenerateRandomString(50)
-                    });
+                        groups.Add(new GroupData()
+                        {
+                            Groupname = TestBase.GenerateRandomString(10),
+                            Groupheader = TestBase.GenerateRandomString(50),
+                            Groupfooter = TestBase.GenerateRandomString(50)
+                        });
+                    }
+                    //if (format == "csv") WriteGroupsToCSVFile(writer, groups);
+                    if (format == "xlsx") WriteGroupsToExelFile(args[2], groups);
+                    else
+                    {
+                        writer = new StreamWriter(args[2]);
+                        if (format == "xml") WriteGroupsToXMLFile(writer, groups);
+                        else if (format == "json") WriteGroupsToJSONFile(writer, groups);
+                        else Console.Write("wrong file format");
+                    }
                 }
-                //if (format == "csv") WriteGroupsToCSVFile(writer, groups);
-                if (format == "xml") WriteGroupsToXMLFile(writer, groups);
-                else if (format == "json") WriteGroupsToJSONFile(writer, groups);
-                else if (format == "xlsx") WriteGroupsToExelFile(args[2], groups);
-                else Console.Write("wrong file format");
-            }
             if (datatype == "contacts")
             {
+                writer = new StreamWriter(args[2]);
                 for (int i = 0; i < count; i++)
                 {
                     contacts.Add(new ContactData()
@@ -68,8 +73,9 @@ namespace addressbook_testdata_generator
                 if (format == "xml") WriteContactsToXMLFile(writer, contacts);
                 else if (format == "json") WriteContactToJSONFile(writer, contacts);
                 else Console.Write("wrong file format");
+                writer.Close();
             }
-            writer.Close();
+            
         }
 
         public static void WriteGroupsToExelFile(string filename, List<GroupData> groups)
@@ -87,9 +93,11 @@ namespace addressbook_testdata_generator
                 row++;
             }
             string fullpath = Path.Combine(Directory.GetCurrentDirectory(), filename);
-            //File.Delete(fullpath);
+            File.Delete(fullpath);
             wb.SaveAs(fullpath);
             wb.Close();
+            app.Visible = false;
+            app.Quit();
         }
 
         public static void WriteContactToJSONFile(StreamWriter writer, List<ContactData> contacts)

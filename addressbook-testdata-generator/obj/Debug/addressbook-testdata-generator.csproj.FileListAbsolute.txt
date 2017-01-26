@@ -21,3 +21,4 @@ C:\projects\pft\addressbook-web-tests\addressbook-testdata-generator\bin\Debug\g
 C:\projects\pft\addressbook-web-tests\addressbook-testdata-generator\bin\Debug\contacts.xml
 C:\projects\pft\addressbook-web-tests\addressbook-testdata-generator\bin\Debug\contacts.json
 C:\projects\pft\addressbook-web-tests\addressbook-testdata-generator\obj\Debug\addressbook-testdata-generator.csproj.ResolveComReference.cache
+C:\projects\pft\addressbook-web-tests\addressbook-testdata-generator\bin\Debug\groups.xlsx

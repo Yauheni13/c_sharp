@@ -16,3 +16,4 @@ C:\projects\pft\addressbook-web-tests\addressbook-web-tests\bin\Debug\Newtonsoft
 C:\projects\pft\addressbook-web-tests\addressbook-web-tests\bin\Debug\groups.json
 C:\projects\pft\addressbook-web-tests\addressbook-web-tests\bin\Debug\contacts.xml
 C:\projects\pft\addressbook-web-tests\addressbook-web-tests\bin\Debug\contacts.json
+C:\projects\pft\addressbook-web-tests\addressbook-web-tests\bin\Debug\groups.xlsx

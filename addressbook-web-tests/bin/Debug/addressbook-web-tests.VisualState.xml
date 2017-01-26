@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]D:\C# projects\addressbook-web-tests\addressbook-web-tests\bin\Debug\addressbook-web-tests.nunit</TopNode>
+  <SelectedNode>[0-1023]WebAddressbookTests.GroupCreationTests.GroupCreationTest(name =rZFzxG\p
+ Header = h
+ Footer = JO)</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]D:\C# projects\addressbook-web-tests\addressbook-web-tests\bin\Debug\addressbook-web-tests.nunit" Expanded="true" />
+    <Node UniqueName="[0-1030]D:\C# projects\addressbook-web-tests\addressbook-web-tests\bin\Debug\addressbook-web-tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1031]WebAddressbookTests" Expanded="true" />
+    <Node UniqueName="[0-1001]WebAddressbookTests.ContactCreationTests" Expanded="true" />
+    <Node UniqueName="[0-1003]WebAddressbookTests.ContactInformationTests" Expanded="true" />
+    <Node UniqueName="[0-1007]WebAddressbookTests.ContactModificationTests" Expanded="true" />
+    <Node UniqueName="[0-1009]WebAddressbookTests.ContactRemovalTests" Expanded="true" />
+    <Node UniqueName="[0-1021]WebAddressbookTests.GroupCreationTests" Expanded="true" />
+    <Node UniqueName="[0-1022]WebAddressbookTests.GroupCreationTests.GroupCreationTest" Expanded="true" />
+    <Node UniqueName="[0-1011]WebAddressbookTests.GroupModificationTests" Expanded="true" />
+    <Node UniqueName="[0-1013]WebAddressbookTests.GroupRemovalTests" Expanded="true" />
+    <Node UniqueName="[0-1015]WebAddressbookTests.LoginTests" Expanded="true" />
+    <Node UniqueName="[0-1018]WebAddressbookTests.SearchTests" Expanded="true" />
+  </Nodes>
+</VisualState>
